@@ -1,0 +1,91 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB">
+
+    <View
+        android:id="@+id/secure_state_rect"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/secure_disabled_background"
+        app:layout_constraintBottom_toTopOf="@+id/btn_secure_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <ImageView
+        android:id="@+id/secure_state_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/home_icon"
+        app:layout_constraintBottom_toTopOf="@+id/secure_state_text"
+        app:layout_constraintEnd_toEndOf="@id/secure_state_rect"
+        app:layout_constraintStart_toStartOf="@id/secure_state_rect"
+        app:layout_constraintTop_toTopOf="@id/secure_state_rect" />
+
+    <TextView
+        android:id="@+id/secure_state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secure Disabled"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/secure_state_img"
+        app:layout_constraintEnd_toEndOf="@id/secure_state_rect"
+        app:layout_constraintStart_toStartOf="@id/secure_state_rect"
+        app:layout_constraintBottom_toBottomOf="@id/secure_state_rect" />
+
+    <Button
+        android:id="@+id/btn_secure_mode"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/blue_btn_background"
+        android:drawableLeft="@drawable/setting_conf_icon"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="보안모드 활성화"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_detected_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_detected_list"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/blue_btn_background"
+        android:drawableLeft="@drawable/setting_conf_icon"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="침입 감지 내역 조회"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reset_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset_password"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/blue_btn_background"
+        android:drawableLeft="@drawable/setting_conf_icon"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:text="비밀번호 재설정"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
